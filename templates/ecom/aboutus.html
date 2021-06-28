@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Farmer's Trading Application</title>
+
+  <title>Farmer's Trading Application</title>
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+  </style>
+</head>
+
+<body style="background-color: black;">
+  <div id="google_translate_element"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {pageLanguage: 'en'},
+        'google_translate_element'
+      );
+    }
+  </script>
+  
+  <script type="text/javascript" src=
+"https://translate.google.com/translate_a/element.js?
+    cb=googleTranslateElementInit">
+  </script>
+  {%if request.user.is_authenticated%}
+    {% include "ecom/customer_navbar.html" %}
+  {%else%}
+    {% include "ecom/navbar.html" %}
+  {%endif%}
+  <br><br><br>
+<h3 style="text-align:center; color: white;">Now you can buy fresh fruits and vegetables filled with nutrients online at Urbankissan. Vegetables grown fresh with safety measures. Enjoy the best of nutrition & health. Home delivery. No pesticide & non GMO. Safe & hygienic. Types: Lettuce, Basil, Palak</h3>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  {% include "ecom/footer.html" %}
+</body>
+</html>
